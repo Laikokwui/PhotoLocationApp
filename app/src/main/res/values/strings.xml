@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Photo To Map</string>
+    <string name="error_failed_to_get_address">"Error: Failed to get Address"</string>
+    <string name="error_no_address">"Error: No Address Found"</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.phototomap.FragmentMaps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_maps"
+        tools:ignore="Instantiatable" />
+
+    <TextView
+        android:id="@+id/textView_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_peach"
+        android:lines="7"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_photo"
+        tools:text="Address" />
+
+    <ImageView
+        android:id="@+id/imageView_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/light_peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_address"
+        app:layout_constraintTop_toBottomOf="@+id/fragment"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="@android:drawable/ic_menu_camera"
+        android:foregroundGravity="center"
+        app:backgroundTint="@color/red"
+        app:ensureMinTouchTargetSize="false"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_location"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="@android:drawable/ic_menu_mylocation"
+        android:foregroundGravity="center"
+        app:backgroundTint="@color/red"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_photo"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
